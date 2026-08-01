@@ -3,7 +3,7 @@ name = "coretester"
 version = "0.1.0"
 edition = "2021"
 description = "Cross-platform per-logical-CPU performance, latency, topology, power and thermal benchmark"
-license = "MIT"
+license = "WTFPL"
 
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
