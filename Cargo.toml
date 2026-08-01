@@ -1,0 +1,18 @@
+[package]
+name = "coretester"
+version = "0.1.0"
+edition = "2021"
+description = "Cross-platform per-logical-CPU performance, latency, topology, power and thermal benchmark"
+license = "MIT"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[target.'cfg(target_os = "linux")'.dependencies]
+libc = "0.2"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+panic = "abort"
